@@ -1,0 +1,21 @@
+.SideBar
+  .SideBar__top
+    .User
+      %h3.User__name
+        user
+      %ul.icons
+        %li.icon
+          = link_to "#" do
+            = icon('fa', 'edit', class: 'btn icon' )
+        %li.icon
+          = link_to "#" do
+            = icon('fa', 'cog', class: 'btn icon' )
+  .GroupList
+    .Group__box
+    -# - current_user.group.each do |group|
+    -#   %ul.Group__info
+    -#     = link_to "#", class: "Group__name" do
+    -#       %li.Group__name
+    -#         = group.name
+    -#       %li.Group__lastMessage
+    -#         = group.show_last_message

@@ -1,0 +1,35 @@
+.ChatMenu
+  .ChatGroup
+    .ChatGroup__container
+      .ChatGroup__info
+        .ChatGroup__name
+          group
+        %p.ChatGroup__member
+          メンバー：
+      .ChatGroup__edit
+        = link_to "#" , class: "btn edit" do
+          %p 編集
+  .Chat__messageList
+    -# render @messages
+  .Form
+    .Form__contents
+      %input{type: "text", class: "Form__contents__text", placeholder: "メッセージを入力して下さい"}
+      %label{class: "Form__contents__image"}
+        = icon('fas', 'image', class: "icon")
+        %input{type: "file", class: "hidden"}
+    %input{type: "submit", class: "submit__btn"}
+
+
+
+
+
+
+
+
+    -# = form_with "#" , html: {class: "Form"}, local: true do |f|
+      -#   = f.text.field :content, class: "inputText", placeholder: 'メッセージを入力して下さい。'
+      -#   = f.label :image, class:'inputImage' do
+      -#     = icon('far', 'image', class: 'icon')
+      -#     = f.file_field :image, class: 'hidden'
+      -# = f.submit '送信',　class: 'submit' 
+
