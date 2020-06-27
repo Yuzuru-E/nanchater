@@ -1,0 +1,8 @@
+- if controller_name != 'sessions'
+  %p.tip 既にアカウントをお持ちの方はこちらから
+  = link_to "ログイン", new_session_path(resource_name), class: 'Button'
+  %br/
+- if devise_mapping.registerable? && controller_name != 'registrations'
+  %p.tip アカウントをお持ちでない方はこちらから
+  = link_to "アカウント作成", new_registration_path(resource_name), class: 'Button'
+  %br/
